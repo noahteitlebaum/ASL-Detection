@@ -72,8 +72,9 @@ def main():
 
         # Exit when q is pressed
         if cv2.waitKey(1) & 0xFF == ord("q"):
-            break
+            break # Exit the loop
 
+    # Stop camera capture and close all OpenCV windows to properly clean up resources
     capture.release()
     cv2.destroyAllWindows()
 

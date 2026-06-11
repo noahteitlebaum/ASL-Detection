@@ -11,7 +11,7 @@ Output: Letter classification labels (A-Z)
 # Import libraries for data handling, model training, evaluation, and saving/loading
 import json
 import numpy as np
-from normalize_landmarks import normalize_and_flatten
+from normalize_flatten_landmarks import normalize_and_flatten
 from augment_data import augment_dataset
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
@@ -32,7 +32,7 @@ def load_and_preprocess_data(data_file):
     Load ASL data from JSON and preprocess it.
     
     Returns: (Let n be the number of samples)
-        X: numpy array of shape (n x 63 matrix) - flattened (one list) landmark coordinates
+        x: numpy array of shape (n x 63 matrix) - flattened (one list) landmark coordinates
         y: numpy array of shape (n x 1 martrix) - letter labels
     """
 
@@ -235,7 +235,7 @@ def main():
     x, y = load_and_preprocess_data(DATA_FILE)
     
     # Augment the dataset to create more training samples with variations
-    x_augmented, y_augmented = augment_dataset(x, y, num_augmentations=10) # Create 10 extra augmented samples
+    x_augmented, y_augmented = augment_dataset(x, y) # Create 5 augmented samples
     
     # Encode the letter labels (y) by converting letters to numbers (y_encoded) and learn the mapping for later decoding (label_encoder)
     y_encoded, label_encoder = encode_labels(y_augmented)
