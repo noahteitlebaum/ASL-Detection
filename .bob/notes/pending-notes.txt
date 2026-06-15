@@ -1,0 +1,1 @@
+{"id":"fed43608-04b3-47c2-bf4a-be5c11b71d0a","ts":"2026-06-15T22:49:23.771Z","path":"C:\\Users\\NoahTeitlebaum\\Internships\\IBM\\Coding\\ASL-Detection\\README.md","version":"1.0.0","taskID":"4f6f98f7-329b-4cb0-b89a-88e4b11b90be"}
