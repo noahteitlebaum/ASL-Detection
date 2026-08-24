@@ -1,4 +1,4 @@
 opencv-python
 mediapipe==0.10.14
 scikit-learn
-numpy
+numpy==1.26.4
